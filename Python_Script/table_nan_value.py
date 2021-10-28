@@ -1,7 +1,7 @@
 '''
 Author: BDFD
 Date: 2021-10-23 19:03:49
-LastEditTime: 2021-10-27 14:54:19
+LastEditTime: 2021-10-27 22:23:26
 LastEditors: Please set LastEditors
 Description: Identify Missing Value in Table for Each Column
 FilePath: \Python_Script\Missing_Value.py
@@ -10,12 +10,12 @@ FilePath: \Python_Script\Missing_Value.py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import pylab as pl
+# import pylab as pl
 
 # Function Name MVA-missing_value_analysis
 
 
-def missing_value_table(df):
+def table_nan_value(df):
     # Total missing values
     missing_value = df.isnull().sum()
 
@@ -52,7 +52,7 @@ def missing_value_table(df):
     # 添加x轴标签，并旋转90度
     plt.xticks(np.arange(missing_value_analysis.shape[0]), list(
         missing_value_analysis['index']))
-    pl.xticks(rotation=90)
+    plt.xticks(rotation=90)
     # # 添加数值显示
     for x, y in enumerate(list(missing_value_analysis.Miss_Rate.values)):
         plt.text(x, y+0.12, '{}'.format(y), ha='center', rotation=90)
