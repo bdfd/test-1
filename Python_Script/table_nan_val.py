@@ -1,21 +1,17 @@
 '''
 Author: BDFD
-Date: 2021-10-23 19:03:49
-LastEditTime: 2021-10-27 22:23:26
+Date: 2021-10-27 18:42:57
+LastEditTime: 2021-10-28 10:34:49
 LastEditors: Please set LastEditors
-Description: Identify Missing Value in Table for Each Column
-FilePath: \Python_Script\Missing_Value.py
-'''
+Description: In User Settings Edit
 
+'''
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# import pylab as pl
-
-# Function Name MVA-missing_value_analysis
 
 
-def table_nan_value(df):
+def Missing_Value_Analysis(df):
     # Total missing values
     missing_value = df.isnull().sum()
 
@@ -61,6 +57,3 @@ def table_nan_value(df):
     plt.show()
     # Return the dataframe with missing information
     return missing_value_analysis
-
-
-print("Welcome to use _Missing_Value_Analysis script")
